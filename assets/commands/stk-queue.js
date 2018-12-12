@@ -4,10 +4,10 @@ const Discord = require('discord.js');
 
 
 module.exports = {
-	name: 'queue',
-	category: 'music',
+	name: 'list',
+	category: 'Music',
 	usage: '<tab number | empty for first tab>',
-	aliases: ['q', 'list'],
+	aliases: ['q', 'queue'],
 	guildOnly: true,
 	description: 'Shows current songs queue for stalker bot',
 	async execute(message, _args, _client, options) {

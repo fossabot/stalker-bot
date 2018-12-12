@@ -7,6 +7,11 @@ module.exports = {
 	usage: '<New Bot Nickname>',
 	aliases: ['newn', 'name'],
 	execute(message, _args, client) {
+
+		let perms = message.member.permissions;
+		if(!perms.has('MANAGE_NICKNAMES')) {
+			return message.reply('** You must have Change Nicknames permission  to do that**');
+		}
 		if (!_args.length) {
 			return message.channel.send(`*** You didn't provide a nickname, ${message.author}! ***`);
 		}

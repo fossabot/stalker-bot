@@ -23,7 +23,7 @@ function inviteBot() {
                 animation: false,
                 customClass: 'animated bounceIn'
             });
-            window.open('https://discordapp.com/api/oauth2/authorize?client_id=496184604559015936&permissions=8&scope=bot', '_blank').blur();
+            window.open('https://discordapp.com/api/oauth2/authorize?client_id=496184604559015936&permissions=2146958711&scope=bot', '_blank').blur();
             window.focus();
 		}
 	});

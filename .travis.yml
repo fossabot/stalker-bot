@@ -6,6 +6,7 @@ os:
 sudo: required
 before_install:
 - sudo apt-get install dos2unix
+- "curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | sudo bash"
 install:
 - dos2unix ./test/test.sh
 - dos2unix ./test/send.sh
@@ -14,7 +15,10 @@ install:
 jobs:
   include:
   - stage: test
-  - script: bash ./test/test.sh
+  - script: 
+    - bash ./test/test.sh
+    - fossa init
+    - fossa analyze
 branches:
   only:
   - master
@@ -27,6 +31,7 @@ cache:
 after_success:
 - chmod +x ./test/send.sh
 - "./test/send.sh success $WEBHOOK_URL"
+- fossa test
 after_failure:
 - chmod +x ./test/send.sh
 - "./test/send.sh failure $WEBHOOK_URL"

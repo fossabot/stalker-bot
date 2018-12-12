@@ -4,7 +4,7 @@ html {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden; 
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 1rem;
     width: 100vw !important;
 
 }
@@ -84,8 +84,9 @@ html.sr .reveal-logo {
 
 .main-footer{
     padding: 1.5rem;
-    height: 25vh;
-    bottom: 0;
+    height: auto;
+	bottom: 0;
+	position: relative;
 }
 
 .p-wrapper{
@@ -105,7 +106,7 @@ html.sr .reveal-logo {
 	border-radius: 0%;
 	color: #8f2222;
 	font-family: 'Reem Kufi', sans-serif;
-	font-size: 1.5em;
+	/*font-size: 1.5em;*/
 	font-weight: 600;
 }
 
@@ -155,6 +156,33 @@ html.sr .reveal-logo {
 	box-shadow: 0 0 0 0.3rem rgba(18, 20, 22, 0.7);
 }
 
+.card{
+	border-color: #8f2222;
+	border-width: 0.1em;
+	background-color: #222326;
+	padding: 1vh 1vw;
+}
+
+.card-header, .card-header .btn-link{
+	background-color: #8f2222;
+	color: #ffffff;
+	border-radius: 0 !important;
+}
+
+.card-body, .card-footer{
+	background-color: #222326;
+	color: #ffffff;
+	border-radius: none;
+}
+
+.card-footer{
+	border-color: #8f2222;
+}
+
+kbd {
+	background-color: #8f2222;
+}
+
 
 /* Animmation Keyframes Styles */
 
@@ -182,24 +210,24 @@ html.sr .reveal-logo {
 
 @media (min-width: 576px) {
 	html {
-		font-size: 14px;
+		font-size: 0.6rem;
 	}
 }
 
 @media (min-width: 768px) {
 	html {
-		font-size: 16px;
+		font-size: 0.8rem;
 	}
 }
 
 @media (min-width: 992px) {
 	html {
-		font-size: 18px;
+		font-size: 1rem;
 	}
 }
 
 @media (min-width: 1200px) {
 	html {
-		font-size: 20px;
+		font-size: 1.2rem;
 	}
 }

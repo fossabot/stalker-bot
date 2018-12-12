@@ -66,4 +66,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		$(e.relatedTarget).children().removeClass('animated bounceInRight');
 		$(e.target).children().addClass('animated bounceInRight');
 	})
+
+	tippy('.tip', {
+		delay: 150,
+		arrow: true,
+		arrowType: 'round',
+		size: 'large',
+		duration: 400,
+		animation: 'scale',
+		touch: false
+	  })
 });
